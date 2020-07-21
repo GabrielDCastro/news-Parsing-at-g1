@@ -14,6 +14,7 @@ html = req.text
 soup = BeautifulSoup(html, 'html.parser')
 
 colection = soup.find_all(class_='feed-post-link gui-color-primary gui-color-hover') #this class is used in every post
+dolar = soup.find(class_='post-economia-cotacao__quote-value')
 
 for item in colection:
     print(item.get_text(), "\n")
